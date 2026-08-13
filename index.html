@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>505 Farm — Regenerative Farming on Maui</title>
+<meta name="description" content="505 Farm is a 50-acre regenerative farm on Maui, Hawaiʻi. Kalo, vanilla, macadamia, seasonal harvests, CSA shares, and farm visits rooted in mālama ʻāina.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="505 Farm — Regenerative Farming on Maui">
+<meta property="og:description" content="A 50-acre regenerative farm on Maui, Hawaiʻi. Kalo, vanilla, macadamia, CSA shares, and farm visits rooted in mālama ʻāina.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="505 Farm — Regenerative Farming on Maui">
+<meta name="twitter:description" content="A 50-acre regenerative farm on Maui, Hawaiʻi. Kalo, vanilla, macadamia, CSA shares, and farm visits rooted in mālama ʻāina.">
+<meta name="twitter:image" content="img/hero.webp">
+<meta name="theme-color" content="#2C3F27">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "505 Farm",
+  "description": "A 50-acre regenerative farm on Maui, Hawaiʻi growing kalo, vanilla, macadamia, and seasonal produce. CSA shares and farm visits.",
+  "email": "aloha@505farm.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "HI",
+    "addressLocality": "Maui"
+  },
+  "image": "img/hero.webp"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,100&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F4F2E7;
+    --meadow:#E7E6D2;
+    --fern:#7A8C5A;
+    --leaf:#3E5636;
+    --deep-leaf:#2C3F27;
+    --soil:#4A3826;
+    --deep-soil:#241C12;
+    --gold:#C9922D;
+    --ink:#26301F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--bone);line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.08}
+  img{display:block;max-width:100%}
+  .eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--fern);margin-bottom:1.1rem}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 1.4rem}
+
+  /* ---------- header ---------- */
+  header{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 1.6rem}
+  .mark{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--bone);letter-spacing:.02em;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+  header nav{display:flex;gap:1.6rem}
+  header nav a{color:var(--bone);text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.04em;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  header nav a:hover,header nav a:focus-visible{color:var(--gold)}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:.4rem;z-index:30}
+  .menu-btn svg{display:block}
+  .menu-btn .line{stroke:var(--bone);stroke-width:2.5;stroke-linecap:round;transition:transform .25s ease,opacity .2s ease;transform-origin:center}
+  @media(max-width:640px){
+    .menu-btn{display:block}
+    header nav{position:fixed;inset:0;background:rgba(36,48,31,.97);flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:20}
+    header nav.open{opacity:1;pointer-events:auto}
+    header nav a{font-size:1.35rem;text-shadow:none}
+    body.nav-open{overflow:hidden}
+    .menu-btn.open .l1{transform:translateY(6px) rotate(45deg)}
+    .menu-btn.open .l2{opacity:0}
+    .menu-btn.open .l3{transform:translateY(-6px) rotate(-45deg)}
+  }
+
+  /* ---------- hero (canopy) ---------- */
+  .hero{
+    min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;
+    background:
+      linear-gradient(180deg, rgba(20,26,16,.35) 0%, rgba(20,26,16,.12) 40%, rgba(24,30,18,.72) 100%),
+      url('img/hero.webp') center 40%/cover no-repeat;
+    position:relative;
+  }
+  .hero .wrap{position:relative;z-index:2;padding-bottom:6rem;padding-top:7rem}
+  .hero .eyebrow{color:#DDE3C6}
+  .hero h1{font-size:clamp(2.7rem,8vw,5.8rem);font-variation-settings:'SOFT' 100;color:var(--bone);max-width:13ch;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  .hero h1 em{font-style:italic;color:#E9C77C}
+  .hero p.lede{margin-top:1.5rem;max-width:34rem;font-size:1.12rem;color:#EFEDDF;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+  .hero .cta-row{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.03em;transition:transform .18s ease, background .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-solid{background:var(--gold);color:var(--deep-soil)}
+  .btn-solid:hover{background:#DBA53E}
+  .btn-ghost{border:1.5px solid var(--bone);color:var(--bone)}
+  .btn-ghost:hover{background:rgba(244,242,231,.14)}
+  .btn-green{background:var(--leaf);color:var(--bone)}
+  .btn-green:hover{background:var(--deep-leaf)}
+
+  /* ---------- sections descend through soil horizons ---------- */
+  section{position:relative;padding:6rem 0}
+  .s-story{background:var(--meadow)}
+  .s-grow{background:linear-gradient(180deg,var(--meadow),#D8D5BB)}
+  .s-life{background:linear-gradient(180deg,#D8D5BB,#CFC9AB)}
+  .s-csa{background:linear-gradient(180deg,#CFC9AB,#C9C2A3)}
+  .s-visit{background:linear-gradient(180deg,#C9C2A3, #8A7A57)}
+  .s-visit .eyebrow{color:var(--deep-leaf)}
+
+  section h2{font-size:clamp(1.9rem,4.5vw,3rem);color:var(--deep-leaf);margin-bottom:1.4rem;max-width:20ch}
+  .cols{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+  @media(max-width:820px){.cols{grid-template-columns:1fr}}
+  .cols p + p{margin-top:1rem}
+  .pull{font-family:'Fraunces',serif;font-size:1.3rem;font-style:italic;color:var(--soil);border-left:3px solid var(--gold);padding-left:1.2rem;margin-top:1.6rem}
+  .photo{border-radius:18px;overflow:hidden;box-shadow:0 14px 44px rgba(36,28,18,.22)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .caption{font-size:.85rem;color:var(--soil);margin-top:.6rem}
+
+  /* ---------- grow ---------- */
+  .grow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.6rem}
+  @media(max-width:820px){.grow-grid{grid-template-columns:1fr}}
+  .grow-card{background:var(--bone);border-radius:18px;overflow:hidden;box-shadow:0 10px 34px rgba(36,28,18,.14)}
+  .grow-card img{width:100%;aspect-ratio:4/4.6;object-fit:cover}
+  .grow-card .pad{padding:1.3rem 1.4rem 1.5rem}
+  .grow-card h3{font-size:1.4rem;color:var(--deep-leaf);margin-bottom:.35rem}
+  .grow-card p{font-size:.95rem}
+  .grow-more{margin-top:2rem;max-width:44rem}
+
+  /* ---------- life gallery ---------- */
+  .life-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.4rem}
+  @media(max-width:900px){.life-grid{grid-template-columns:repeat(2,1fr)}}
+  .life-grid figure{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(36,28,18,.16);position:relative}
+  .life-grid img{width:100%;aspect-ratio:3/3.6;object-fit:cover;transition:transform .5s ease}
+  .life-grid figure:hover img{transform:scale(1.04)}
+  @media(prefers-reduced-motion:reduce){.life-grid figure:hover img{transform:none}}
+  .life-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;color:var(--bone);font-size:.85rem;font-weight:700;letter-spacing:.03em;background:linear-gradient(180deg,transparent,rgba(20,16,10,.72))}
+
+  /* ---------- csa ---------- */
+  .csa-card{background:var(--bone);border-radius:18px;padding:2.6rem;max-width:44rem;box-shadow:0 10px 40px rgba(36,28,18,.12)}
+  .csa-card h3{font-size:1.6rem;color:var(--deep-leaf);margin-bottom:.8rem}
+  .csa-card p{margin-bottom:1.6rem}
+
+  /* ---------- visit ---------- */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem}
+  @media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+  .visit-card{background:rgba(244,242,231,.92);border-radius:18px;padding:2.2rem}
+  .visit-card h3{font-size:1.4rem;color:var(--deep-leaf);margin-bottom:.7rem}
+
+  /* ---------- faq (subsoil) ---------- */
+  .s-faq{background:linear-gradient(180deg,#8A7A57,#5F5038)}
+  .s-faq .eyebrow{color:#EFE6C8}
+  .s-faq h2{color:var(--bone)}
+  .faq-list{max-width:44rem;display:grid;gap:.9rem;margin-top:2rem}
+  .faq-list details{background:rgba(244,242,231,.94);border-radius:14px;overflow:hidden}
+  .faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.4rem;font-weight:700;color:var(--deep-leaf)}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:'+';font-family:'Fraunces',serif;font-size:1.5rem;color:var(--gold);line-height:1;transition:transform .25s ease}
+  .faq-list details[open] summary::after{transform:rotate(45deg)}
+  .faq-list details p{padding:0 1.4rem 1.2rem;font-size:.97rem}
+
+  /* ---------- footer (deep soil) ---------- */
+  footer{background:var(--deep-soil);color:#D9CFB8;padding:5rem 0 3rem;position:relative;overflow:hidden}
+  footer .mark{color:var(--bone);font-size:1.8rem;margin-bottom:1rem;display:block;text-shadow:none}
+  footer p{max-width:36rem;color:#B5A98D}
+  footer a{color:var(--gold);text-decoration:none;font-weight:700}
+  footer a:hover,footer a:focus-visible{text-decoration:underline}
+  .foot-nav{margin-top:2rem;display:flex;gap:1.6rem;flex-wrap:wrap}
+  .foot-nav a{color:#D9CFB8;font-weight:700;text-decoration:none;font-size:.9rem}
+  .foot-nav a:hover,.foot-nav a:focus-visible{color:var(--gold)}
+  .foot-meta{margin-top:2.6rem;font-size:.85rem;color:#8A7E63;display:flex;gap:2rem;flex-wrap:wrap}
+  .roots{position:absolute;top:0;left:0;width:100%;opacity:.35;pointer-events:none}
+  .roots path{stroke:#4A3826;fill:none;stroke-width:1.5}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .btn:hover{transform:none}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="mark">505 Farm</span>
+  <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mainnav">
+    <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true">
+      <line class="line l1" x1="1" y1="5" x2="25" y2="5"/>
+      <line class="line l2" x1="1" y1="11" x2="25" y2="11"/>
+      <line class="line l3" x1="1" y1="17" x2="25" y2="17"/>
+    </svg>
+  </button>
+  <nav id="mainnav" aria-label="Main">
+    <a href="#story">Our story</a>
+    <a href="#grow">What we grow</a>
+    <a href="#csa">CSA</a>
+    <a href="#visit">Visit &amp; stay</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-label="Welcome">
+    <div class="wrap">
+      <p class="eyebrow">Maui, Hawaiʻi · 50 acres</p>
+      <h1>Farming the land <em>forward</em>.</h1>
+      <p class="lede">505 Farm is a fifty-acre regenerative farm on Maui. We grow food the way healthy land grows itself — building soil, closing loops, and leaving every acre more alive than we found it.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#csa">Join the CSA</a>
+        <a class="btn btn-ghost" href="#visit">Plan a visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-story" id="story">
+    <div class="wrap reveal">
+      <p class="eyebrow">Our story</p>
+      <h2>Rooted in mālama ʻāina</h2>
+      <div class="cols">
+        <div>
+          <p>Mālama ʻāina — to care for the land — isn't a slogan here. It's the whole operating manual. On our fifty acres we farm with the ecosystem rather than against it: mulching deep, keeping soil covered and living, and letting diversity do the work that chemicals do elsewhere.</p>
+          <p>Our beds run in long polyculture rows at the forest's edge — kalo beside coffee beside coleus and lemongrass — while sheep graze the orchard understory and the food forest fills in overhead. Regenerative isn't a certification for us. It's a direction: every season the soil gets deeper and the farm feeds more life than the year before.</p>
+          <p class="pull">To sustain is not enough. We want to hand this land forward better than we found it.</p>
+        </div>
+        <div>
+          <div class="photo"><img src="img/working.webp" alt="Working the polyculture rows at 505 Farm, with mulched paths and the forest beyond" loading="lazy"></div>
+          <p class="caption">Morning in the rows — kalo, kale, and lemongrass sharing a bed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-grow" id="grow">
+    <div class="wrap reveal">
+      <p class="eyebrow">What we grow</p>
+      <h2>Seasonal harvests from living soil</h2>
+      <p style="max-width:36rem">A working farm is never the same two weeks in a row. Here's some of what moves through our fields, orchard, and food forest across the year.</p>
+      <div class="grow-grid">
+        <article class="grow-card">
+          <img src="img/taro.webp" alt="Young kalo (taro) plants in freshly mulched beds" loading="lazy">
+          <div class="pad">
+            <h3>Kalo</h3>
+            <p>Taro grown in living beds — the canoe crop at the heart of Hawaiian agriculture, and of ours.</p>
+          </div>
+        </article>
+        <article class="grow-card">
+          <img src="img/vanilla.webp" alt="Vanilla orchid vines climbing bamboo stakes" loading="lazy">
+          <div class="pad">
+            <h3>Vanilla</h3>
+            <p>Hand-tended vanilla orchids climbing bamboo in the shade — patient farming at its most fragrant.</p>
+          </div>
+        </article>
+        <article class="grow-card">
+          <img src="img/macnut.webp" alt="Macadamia trees in bloom in the orchard" loading="lazy">
+          <div class="pad">
+            <h3>Macadamia</h3>
+            <p>Our orchard rows bloom in cascades — with sheep grazing the understory to close the loop.</p>
+          </div>
+        </article>
+      </div>
+      <p class="grow-more">Alongside the headliners: bananas, market vegetables, culinary herbs, coffee, and whatever the food forest decides to be generous with this season.</p>
+    </div>
+  </section>
+
+  <section class="s-life" id="life">
+    <div class="wrap reveal">
+      <p class="eyebrow">Life on the farm</p>
+      <h2>Fifty acres, fully alive</h2>
+      <div class="life-grid">
+        <figure>
+          <img src="img/lamb.webp" alt="A newborn black-and-white lamb resting on hay" loading="lazy">
+          <figcaption>New arrivals</figcaption>
+        </figure>
+        <figure>
+          <img src="img/orchid.webp" alt="An orange spotted orchid blooming on a tree trunk" loading="lazy">
+          <figcaption>Wild blooms</figcaption>
+        </figure>
+        <figure>
+          <img src="img/pond.webp" alt="A pond covered in flowering water hyacinth" loading="lazy">
+          <figcaption>The pond in flower</figcaption>
+        </figure>
+        <figure>
+          <img src="img/cat.webp" alt="An orange farm cat perched on a garden statue among ti leaves" loading="lazy">
+          <figcaption>Farm security</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-csa" id="csa">
+    <div class="wrap reveal">
+      <p class="eyebrow">Community supported agriculture</p>
+      <h2>Eat with the seasons</h2>
+      <div class="csa-card">
+        <h3>The 505 Farm share</h3>
+        <p>A weekly box of whatever the farm is proudest of — harvested that morning, shaped by the season. Joining the CSA means you're not just buying produce; you're backing a way of farming.</p>
+        <a class="btn btn-green" href="mailto:aloha@505farm.com?subject=CSA%20interest">Ask about shares</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-visit" id="visit">
+    <div class="wrap reveal">
+      <p class="eyebrow">Visit &amp; stay</p>
+      <h2>Come put your hands in the soil</h2>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Farm visits</h3>
+          <p>Walk the land with us. See how regenerative farming actually works — from compost to canopy — and taste what's ripe.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Farm stays</h3>
+          <p>Wake up on a working farm. Ask us about staying on Maui and experiencing the island the way we live it.</p>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <a class="btn btn-green" href="mailto:aloha@505farm.com?subject=Farm%20visit">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-faq" id="faq">
+    <div class="wrap reveal">
+      <p class="eyebrow">Good to know</p>
+      <h2>Questions we hear a lot</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Where exactly is the farm?</summary>
+          <p>We're on the island of Maui, Hawaiʻi. We share exact directions when you book a visit or pick up a share — email us at aloha@505farm.com and we'll point you our way.</p>
+        </details>
+        <details>
+          <summary>Can I just drop by?</summary>
+          <p>We're a working farm rather than a public attraction, so visits are by arrangement. Get in touch and we'll find a time to walk the land together.</p>
+        </details>
+        <details>
+          <summary>How does the CSA work?</summary>
+          <p>You sign up for a season and pick up a box each week filled with whatever we harvested that morning — kalo, greens, herbs, fruit, and surprises from the food forest. Email us for current availability and pricing.</p>
+        </details>
+        <details>
+          <summary>What does "regenerative" mean here?</summary>
+          <p>It means we measure success by what we give back: deeper soil, more shade, more life. No synthetic inputs — just mulch, diversity, animals in rotation, and patience.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="roots" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M120,0 C130,60 90,90 110,160 M320,0 C310,50 350,80 330,150 M520,0 C540,70 500,100 525,180 M760,0 C750,55 790,95 770,170 M980,0 C995,60 955,90 985,160 M1200,0 C1190,65 1230,100 1205,175 M1380,0 C1390,50 1360,85 1375,150"/>
+  </svg>
+  <div class="wrap">
+    <span class="mark">505 Farm</span>
+    <p>Fifty acres of regenerative farming on Maui, Hawaiʻi. Grown with aloha, farmed forward.</p>
+    <p style="margin-top:1.2rem"><a href="mailto:aloha@505farm.com">aloha@505farm.com</a></p>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#story">Our story</a>
+      <a href="#grow">What we grow</a>
+      <a href="#csa">CSA</a>
+      <a href="#visit">Visit &amp; stay</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="foot-meta">
+      <span>© 2026 505 Farm</span>
+      <span>Maui, Hawaiʻi</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.menu-btn');
+  const nav = document.getElementById('mainnav');
+  btn.addEventListener('click', ()=>{
+    const open = nav.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('nav-open', open);
+  });
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+    nav.classList.remove('open'); btn.classList.remove('open');
+    btn.setAttribute('aria-expanded','false'); document.body.classList.remove('nav-open');
+  }));
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
