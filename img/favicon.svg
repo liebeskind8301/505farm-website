@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#2C3F27"/>
+  <!-- sprout: stem with two leaves -->
+  <path d="M32 52 L32 30" stroke="#C9922D" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M32 34 C 22 34, 15 28, 14 18 C 24 18, 31 24, 32 34 Z" fill="#7A8C5A"/>
+  <path d="M32 30 C 42 30, 49 24, 50 14 C 40 14, 33 20, 32 30 Z" fill="#C9922D"/>
+</svg>
